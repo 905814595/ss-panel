@@ -202,6 +202,7 @@ class Ss {
             $cmd = "openssl pkcs12 -export -inkey $location/user-$uname/user-$uname-key.pem -in $location/user-$uname/user-$uname-cert.pem -name $uname -certfile $location/ca-cert.pem -caname $caname -out $location/user-$uname/$uname.p12 -passout pass:$pass";
             system($cmd);
             copy("$location/user-$uname/$uname.p12", "/var/www/ocvpn/$uname.p12");
+            system($cmd);
         }
     }
 

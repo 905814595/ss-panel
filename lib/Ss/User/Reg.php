@@ -43,9 +43,17 @@ class Reg {
             "#reg_date" =>  'NOW()',
             "ref_by" => $ref_by
         ]);
-        $acpass = \Ss\User\Ss::get_random_char(4);
-        $s = new \Ss\User\Ss(2);
-        $s->create_userca($username, $acpass, 365);
+        $uid = $this->db->select("user","*",[
+            "user_name" => $username,
+            "LIMIT" => "1"
+        ])['0']['uid'];
+        $this->db->insert("ac_cert",[
+            "user_name" => $username,
+            "uid" => $uid
+        ]);
+        $acpass = \Ss\Etc\Comm::get_random_char(4);
+        $s = new \Ss\User\Ss($uid);
+        $s->update_ac_cert($username, $acpass, 365);
    }
 
 }

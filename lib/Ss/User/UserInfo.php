@@ -102,5 +102,8 @@ class UserInfo {
         $this->db->delete($this->table,[
             "uid" => $this->uid
         ]);
+        $this->db->delete("ac_cert",[
+            "uid" => $this->uid
+        ]);
     }
 }
