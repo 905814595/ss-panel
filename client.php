@@ -41,7 +41,7 @@ include_once 'header.php';
                                 <td>4</td>
                                 <td>Android</td>
                                 <td>OpenConnect</td>
-                                <td><a href="download/fqrouter.apk" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/fqrouter.apk" target="_blank">本地下载2</a></td>
+                                <td><a href="download/OpenConnect.apk" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/OpenConnect.apk" target="_blank">本地下载2</a></td>
                             </tr>
                              <tr>
                                 <td>5</td>
