@@ -23,7 +23,7 @@ include_once 'header.php';
                                 <td>1</td>
                                 <td>Android</td>
                                 <td>shadowsocks 2.8.3</td>
-                                <td><a href="download/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载2</a></td>
+                                <td><a href="download/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载</a></td>
                             </tr>
                              <tr>
                                 <td>2</td>
@@ -35,13 +35,13 @@ include_once 'header.php';
                                 <td>3</td>
                                 <td>Android</td>
                                 <td>fqrouter</td>
-                                <td><a href="download/fqrouter.apk" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/fqrouter.apk" target="_blank">本地下载2</a></td>
+                                <td><a href="download/fqrouter.apk" target="_blank">本地下载</a></td>
                             </tr>
                              <tr>
                                 <td>4</td>
                                 <td>Android</td>
                                 <td>OpenConnect</td>
-                                <td><a href="download/OpenConnect.apk" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/OpenConnect.apk" target="_blank">本地下载2</a></td>
+                                <td><a href="download/OpenConnect.apk" target="_blank">本地下载</a></td>
                             </tr>
                              <tr>
                                 <td>5</td>
@@ -53,7 +53,7 @@ include_once 'header.php';
                                 <td>6</td>
                                 <td>Windows</td>
                                 <td>shadowsocks 2.5.8</td>
-                                <td><a href="download/shadowsocks-win-2.5.8.zip" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/shadowsocks-win-2.5.8.zip" target="_blank">本地下载2</a></td>
+                                <td><a href="download/shadowsocks-win-2.5.8.zip" target="_blank">本地下载</a></td>
                             </tr>
                             <tr>
                                 <td>7</td>
@@ -65,7 +65,7 @@ include_once 'header.php';
                                 <td>8</td>
                                 <td>Google Chrome浏览器</td>
                                 <td>SwitchySharp插件</td>
-                                <td><a href="download/SwitchySharp.tar.gz" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/SwitchySharp.tar.gz" target="_blank">本地下载2</a></td>
+                                <td><a href="download/SwitchySharp.tar.gz" target="_blank">本地下载</a></td>
                             </tr>
                             <tr>
                                 <td>9</td>
@@ -77,7 +77,7 @@ include_once 'header.php';
                                 <td>10</td>
                                 <td>Mac OS</td>
                                 <td>shadowsocks 2.6.3</td>
-                                <td><a href="download/shadowsocksX-2.6.3.dmg" target="_blank">本地下载1</a>/<a href="http://sg.spiritrain.tk/download/shadowsocksX-2.6.3.dmg" target="_blank">本地下载2</a></td>
+                                <td><a href="download/shadowsocksX-2.6.3.dmg" target="_blank">本地下载</a></td>
                             </tr>
                              <tr>
                                 <td>11</td>
