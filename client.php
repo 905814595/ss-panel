@@ -53,13 +53,19 @@ include_once 'header.php';
                                 <td>6</td>
                                 <td>Windows</td>
                                 <td>shadowsocks 2.5.8</td>
-                                <td><a href="download/shadowsocks-win-2.5.8.zip" target="_blank">本地下载</a></td>
+                                <td><a href="download/Shadowsocks-2.5.8.zip" target="_blank">本地下载</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Windows</td>
+                                <td>shadowsocks 3.0</td>
+                                <td><a href="download/Shadowsocks-3.0.zip" target="_blank">本地下载</a></td>
                             </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Windows</td>
-                                <td>shadowsocks 2.5.8</td>
-                                <td><a href="https://github.com/shadowsocks/shadowsocks-windows/releases/download/2.5.8/Shadowsocks-2.5.8.zip" target="_blank">远程下载</a></td>
+                                <td>shadowsocks 3.0</td>
+                                <td><a href="https://github.com/shadowsocks/shadowsocks-windows/releases/download/3.0/Shadowsocks-3.0.zip" target="_blank">远程下载</a></td>
                             </tr>
                             <tr>
                                 <td>8</td>

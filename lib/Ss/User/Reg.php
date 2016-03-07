@@ -37,7 +37,7 @@ class Reg {
             "d" => '0',
             "plan" => $plan,
             "transfer_enable" => $transfer,
-            "port" => $this->GetLastPort()+rand(1,5),
+            "port" => $this->GetLastPort()+2,
             "invite_num" => $invite_num,
             "money" => '0',
             "#reg_date" =>  'NOW()',
