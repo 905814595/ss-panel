@@ -126,6 +126,12 @@ require_once '_check.php';
                 </li>
 
                 <li  >
+                    <a href="client.php">
+                        <i class="fa fa-align-left"></i> <span>客户端</span>
+                    </a>
+                </li>
+
+                <li  >
                     <a href="sys.php">
                         <i class="fa fa-align-left"></i> <span>系统信息</span>
                     </a>
