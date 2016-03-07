@@ -119,18 +119,18 @@ require_once '_check.php';
                     </a>
                 </li>
 
+               <li  >
+                    <a href="client.php">
+                        <i class="fa fa-download"></i> <span>客户端</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="invite.php">
                         <i class="fa fa-users"></i> <span>邀请好友</span>
                     </a>
                 </li>
-
-                <li  >
-                    <a href="client.php">
-                        <i class="fa fa-align-left"></i> <span>客户端</span>
-                    </a>
-                </li>
-
+ 
                 <li  >
                     <a href="sys.php">
                         <i class="fa fa-align-left"></i> <span>系统信息</span>

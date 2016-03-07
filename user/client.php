@@ -26,7 +26,7 @@ $ssmin = new \Ss\Etc\Ana();
                             <h3 class="box-title"><?php echo $site_name; ?> 客户端</h3>
                         </div><!-- /.box-header -->
                         <?php
-                          require_once '../links.php';
+                          include_once '../links.php';
                         ?>
                     </div>
                 </div>

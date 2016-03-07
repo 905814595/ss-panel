@@ -120,7 +120,7 @@ require_once '_check.php';
 
                 <li  >
                     <a href="sys.php">
-                        <i class="fa fa-users"></i> <span>系统信息</span>
+                        <i class="fa fa-align-left"></i> <span>系统信息</span>
                     </a>
                 </li>
             </ul>
