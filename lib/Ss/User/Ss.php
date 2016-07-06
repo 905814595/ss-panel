@@ -7,15 +7,17 @@ namespace Ss\User;
 
 class Ss {
     //
-    public  $uid;
+    public $uid;
     public $db;
     public $CA_LOCATION;
+    public $WWW_LOCATION;
 
     function  __construct($uid=0){
         global $db;
         $this->uid = $uid;
         $this->db  = $db;
         $this->CA_LOCATION = "/etc/ocserv/CAforOC";
+	$this->WWW_LOCATION = "/var/www/ss-panel";
     }
 
     //user info array
@@ -168,6 +170,7 @@ class Ss {
     {
         if ($this->check_ca_cert()) {
             $location = $this->CA_LOCATION;
+            $wwwloc = $this->WWW_LOCATION;
             $cmd = "cat $location/user-$uname/user-$uname-cert.pem >>$location/revoked.pem";
             system($cmd);
             $cmd = "certtool --stdout-info --generate-crl --load-ca-privkey $location/ca-key.pem --load-ca-certificate $location/ca-cert.pem --load-certificate $location/revoked.pem --template $location/crl.tmpl --outfile $location/crl.pem >>$location/user-$uname/out.tmp";
@@ -175,8 +178,8 @@ class Ss {
             $time = time();
             $cmd = "mv $location/user-$uname $location/revoke/user-$uname\_$time";
             system($cmd);
-            if (file_exists("/var/www/ocvpn/$uname.p12")) {
-                unlink("/var/www/ocvpn/$uname.p12");
+            if (file_exists("$wwwloc/ocvpn/$uname.p12")) {
+                unlink("$wwwloc/ocvpn/$uname.p12");
             }
         }
     }
@@ -185,12 +188,13 @@ class Ss {
     function create_userca($uname,$pass,$time)
     {
         $location = $this->CA_LOCATION;
+        $wwwloc = $this->WWW_LOCATION;
         if ($this->check_ca_cert()) {
-            if (file_exists("/var/www/ocvpn/$uname.p12")) {
+            if (file_exists("$wwwloc/ocvpn/$uname.p12")) {
                 $this->revoke_userca($uname);
             }
             mkdir("$location/user-$uname");
-            $caname="RYGH";
+            $caname="SportsHero";
             $tmpl= fopen("$location/user-$uname/user.tmpl", "w") or die("Unable to open file!");
             $content = "cn =$uname\nunit = Route\nuid =$uname\nexpiration_days =$time\nsigning_key\ntls_www_client";
             fwrite($tmpl, $content);
@@ -201,8 +205,7 @@ class Ss {
             system($cmd);
             $cmd = "openssl pkcs12 -export -inkey $location/user-$uname/user-$uname-key.pem -in $location/user-$uname/user-$uname-cert.pem -name $uname -certfile $location/ca-cert.pem -caname $caname -out $location/user-$uname/$uname.p12 -passout pass:$pass";
             system($cmd);
-            copy("$location/user-$uname/$uname.p12", "/var/www/ocvpn/$uname.p12");
-            system($cmd);
+            copy("$location/user-$uname/$uname.p12", "$wwwloc/ocvpn/$uname.p12");
         }
     }
 
