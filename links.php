@@ -13,7 +13,7 @@
                 <td>1</td>
                 <td>Android</td>
                 <td>shadowsocks 2.8.3</td>
-                <td><a href="download/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/shadowsocks-nightly-2.8.3.apk target="_blank">本地下载</a></td>
             </tr>
              <tr>
                 <td>2</td>
@@ -25,13 +25,13 @@
                 <td>3</td>
                 <td>Android</td>
                 <td>fqrouter</td>
-                <td><a href="download/fqrouter.apk" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/fqrouter.apk" target="_blank">本地下载</a></td>
             </tr>
              <tr>
                 <td>4</td>
                 <td>Android</td>
                 <td>OpenConnect</td>
-                <td><a href="download/OpenConnect.apk" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/OpenConnect.apk" target="_blank">本地下载</a></td>
             </tr>
              <tr>
                 <td>5</td>
@@ -43,13 +43,13 @@
                 <td>6</td>
                 <td>Windows</td>
                 <td>shadowsocks 2.5.8</td>
-                <td><a href="download/Shadowsocks-2.5.8.zip" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/Shadowsocks-2.5.8.zip" target="_blank">本地下载</a></td>
             </tr>
             <tr>
                 <td>6</td>
                 <td>Windows</td>
                 <td>shadowsocks 3.0</td>
-                <td><a href="download/Shadowsocks-3.0.zip" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/Shadowsocks-3.0.zip" target="_blank">本地下载</a></td>
             </tr>
             <tr>
                 <td>7</td>
@@ -61,7 +61,7 @@
                 <td>8</td>
                 <td>Google Chrome浏览器</td>
                 <td>SwitchySharp插件</td>
-                <td><a href="download/SwitchySharp.tar.gz" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/SwitchySharp.tar.gz" target="_blank">本地下载</a></td>
             </tr>
             <tr>
                 <td>9</td>
@@ -73,7 +73,7 @@
                 <td>10</td>
                 <td>Mac OS</td>
                 <td>shadowsocks 2.6.3</td>
-                <td><a href="download/shadowsocksX-2.6.3.dmg" target="_blank">本地下载</a></td>
+                <td><a href="<?php echo $site_url ?>download/shadowsocksX-2.6.3.dmg" target="_blank">本地下载</a></td>
             </tr>
              <tr>
                 <td>11</td>

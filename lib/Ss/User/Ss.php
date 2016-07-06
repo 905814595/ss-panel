@@ -17,7 +17,7 @@ class Ss {
         $this->uid = $uid;
         $this->db  = $db;
         $this->CA_LOCATION = "/etc/ocserv/CAforOC";
-	$this->WWW_LOCATION = "/var/www/ss-panel";
+        $this->WWW_LOCATION = "/var/www";
     }
 
     //user info array

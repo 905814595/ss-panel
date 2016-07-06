@@ -17,6 +17,6 @@ CREATE TABLE `ss_node` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `ss_node` (`id`, `node_name`, `node_type`, `node_server`, `node_method`, `node_info`, `node_status`, `node_order`) VALUES
-(1,	'第一个节点',	0,	'node.url.io',	'aes-256-cfb',	'node描述',	'可用',	0);
+(1,	'第一个节点',	0,	'spiritrain.tk',	'rc4-md5',	'node描述',	'可用',	0);
 
 -- 2015-01-14 06:18:14

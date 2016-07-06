@@ -9,15 +9,15 @@ CREATE TABLE IF NOT EXISTS `invite_code` (
 `id` int(32) NOT NULL,
   `code` varchar(128) NOT NULL,
   `user` int(32) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3644 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `invite_code`
 --
 
 INSERT INTO `invite_code` (`id`, `code`, `user`) VALUES
-(3639, '193c77e35a4a3f', 1),
-(3643, '134201a5b85900', 0);
+(1, '193c77e35a4a3f', 1),
+(2, '134201a5b85900', 1);
 
 --
 -- Indexes for dumped tables
@@ -36,5 +36,5 @@ ALTER TABLE `invite_code`
 --
 -- AUTO_INCREMENT for table `invite_code`
 --
-ALTER TABLE `invite_code`
-MODIFY `id` int(32) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3644; 
+-- ALTER TABLE `invite_code`
+-- MODIFY `id` int(32) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1; 
