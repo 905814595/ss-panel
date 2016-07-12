@@ -24,7 +24,7 @@ $share = new Ss\User\Ss(2);
                     <div class="box box-solid">
                         <div class="box-header">
                             <i class="fa fa-th-list"></i>
-                            <h3 class="box-title">节点</h3>
+                            <h3 class="box-title">我的账号</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <div class="callout callout-warning">
@@ -50,10 +50,11 @@ $share = new Ss\User\Ss(2);
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="tab_1-1">
                                             <p> <a class="btn btn-xs bg-purple btn-flat margin" href="#">地址:</a> <code><?php echo $row['node_server']; ?></code>
-                                                <a class="btn btn-xs bg-orange btn-flat margin" href="#"><?php echo $row['node_status']; ?></a>
-                                                <a class="btn btn-xs bg-green btn-flat margin" href="#"><?php echo $row['node_method']; ?></a>
-                                            </p>
-                                            <p> <?php echo $row['node_info']; ?></p>
+                                                <a class="btn btn-xs bg-green btn-flat margin" href="#">加密:</a><code><?php echo $row['node_method']; ?></code><br />
+                                                <a class="btn btn-xs bg-red btn-flat margin" href="#">显示:</a>
+                                                <a target="_blank" href="node_json.php?id=<?php echo $row['id']; ?>&type=1">json配置</a>/
+                                                <a target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>&type=1">二维码</a><br />
+                                                <a class="btn btn-xs bg-blue btn-flat margin" href="#">说明:</a><?php echo $row['node_info']; ?></p>
                                         </div><!-- /.tab-pane -->
                                     </div><!-- /.tab-content -->
                                 </div><!-- nav-tabs-custom -->
@@ -73,15 +74,18 @@ $share = new Ss\User\Ss(2);
                         <div class="box-body">
                             <div class="callout callout-warning">
                                 <h4>注意!</h4>
-                                <p>公共账号每个月换一次密码</p>
-                                <p>当有人临时借翻墙的时候请不要给出自己的用户名和密码，给公共账号</p>
-                                <p>也请不要随意公开公共账号</p>
+                                <p>公共账号每个月换一次密码<br />
+                                   当有人临时借翻墙的时<br />
+                                   请不要外传自己的用户名和密码，给公共账号</p>
                             </div>
                             <div>
-                                <p>公用shadowsocks的端口：<?php echo $share->get_port();?></p>
-                                <p>公用shadowsocks的密码：<?php echo $share->get_pass();?></p>
-                                <p>公用anyconnect的<a href="../ocvpn/share.p12" target="_blank">证书下载</a></p>
-                                <p>公用anyconnect的证书密码：<?php echo $share->get_ac_pass();?></p>
+                                <p>公用shadowsocks的端口：<?php echo $share->get_port();?><br />
+                                   公用shadowsocks的密码：<?php echo $share->get_pass();?></p>
+                                <p>anyconnect服务器地址同shadowsocks，端口999 <br />
+                                   在服务器地址填写 服务器:999的形式 <br />
+                                   如127.0.0.1:999（地址往下看勿照抄！）<br />
+                                   公用anyconnect的<a href="../ocvpn/share.p12" target="_blank">证书下载</a><br />
+                                   公用anyconnect的证书密码：<?php echo $share->get_ac_pass();?></p>
                             </div><?php
 
                             $node1 = $node->NodesArray(0);
@@ -103,10 +107,11 @@ $share = new Ss\User\Ss(2);
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="tab_1-1">
                                             <p> <a class="btn btn-xs bg-purple btn-flat margin" href="#">地址:</a> <code><?php echo $row['node_server']; ?></code>
-                                                <a class="btn btn-xs bg-orange btn-flat margin" href="#"><?php echo $row['node_status']; ?></a>
-                                                <a class="btn btn-xs bg-green btn-flat margin" href="#"><?php echo $row['node_method']; ?></a>
-                                            </p>
-                                            <p> <?php echo $row['node_info']; ?></p>
+                                                <a class="btn btn-xs bg-green btn-flat margin" href="#">加密:</a><code><?php echo $row['node_method']; ?></code><br />
+                                                <a class="btn btn-xs bg-red btn-flat margin" href="#">显示:</a>
+                                                <a target="_blank" href="node_json.php?id=<?php echo $row['id']; ?>&type=1">json配置</a>/
+                                                <a target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>&type=1">二维码</a><br />
+                                                <a class="btn btn-xs bg-blue btn-flat margin" href="#">说明:</a><?php echo $row['node_info']; ?></p>
                                         </div><!-- /.tab-pane -->
                                     </div><!-- /.tab-content -->
                                 </div><!-- nav-tabs-custom -->

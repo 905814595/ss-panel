@@ -41,10 +41,14 @@ $unix_time = $oo->get_last_unix_time();
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
-                            <h3 class="box-title">公告&FAQ</h3>
+                            <h3 class="box-title">ShadowSocks信息</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <p>消费信息：<a href="https://docs.google.com/spreadsheets/d/1LYJd1ZWyoHCviJL0ZZP5_WIHj4XZtGBIj2FAK-SesjU/edit?usp=sharing" target="_blank">妖的linode</a>(Google Doc)</p>
+                            <p> shadowsocks可在全平台使用<br />
+                                iOS平台需要下载付费客户端shadowrocket </p>
+                            <p> ss端口：<code><?php echo $oo->get_port();?></code> </p>
+                            <p> ss密码：<?php echo $oo->get_pass();?> </p>
+                            <p> 最后使用ss时间：<code><?php echo date('Y-m-d H:i:s',$unix_time);  ?></code> </p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (right) -->
@@ -52,52 +56,44 @@ $unix_time = $oo->get_last_unix_time();
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
-                            <h3 class="box-title">流量使用情况</h3>
+                            <h3 class="box-title">AnyConnect信息</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <p> 已用流量：<?php echo $transfers."MB";?> </p>
+                            <p> anyConnect是iOS平台的免费解决方案<br />
+                                缺点是只能全局翻墙，会让国内网络变慢<br />
+                                服务器地址同shadowsocks，端口999<br />
+                                在服务器地址填写 服务器:999的形式<br />
+                                如127.0.0.1:999（地址勿照抄！） </p>
+                            <p> ac证书：<a href="../ocvpn/<?php echo $oo->get_user_name();?>.p12" target="_blank">下载</a></p>
+                            <p> ac密码：<?php echo $oo->get_ac_pass();?> </p>
+                            <p> ac过期日期：<code><?php echo date('Y-m-d H:i:s',$oo->get_ac_expire());  ?></code> </p>
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                </div><!-- /.col (right) -->
+
+                <div class="col-md-6">
+                    <div class="box box-solid">
+                        <div class="box-header">
+                            <h3 class="box-title">ShadowSocks流量使用</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <p> 已用ss流量：<?php echo $transfers."MB";?> </p>
                             <div class="progress progress-striped">
                                 <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $used_100; ?>%">
                                     <span class="sr-only">Transfer</span>
                                 </div>
                             </div>
-                            <p> 可用流量：<?php echo $all_transfer ."GB";?> </p>
-                            <p> 剩余流量：<?php echo  $unused_transfer."GB";?> </p>
+                            <p> 可用ss流量：<?php echo $all_transfer ."GB";?> </p>
+                            <p> 剩余ss流量：<?php echo  $unused_transfer."GB";?> </p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
 
-                <div class="col-md-6">
-                    <div class="box box-solid">
-                        <div class="box-header">
-                            <h3 class="box-title">连接信息</h3>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <p> 端口：<code><?php echo $oo->get_port();?></code> </p>
-                            <p> 密码：<?php echo $oo->get_pass();?> </p>
-                            <p> 套餐：<span class="label label-info"> <?php echo $oo->get_plan();?> </span> </p>
-                            <p> 最后使用时间：<code><?php echo date('Y-m-d H:i:s',$unix_time);  ?></code> </p>
-                        </div><!-- /.box-body -->
-                    </div><!-- /.box -->
-                </div><!-- /.col (right) -->
 
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
-                            <h3 class="box-title">AnyConnect</h3>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <p> 证书：<a href="../ocvpn/<?php echo $oo->get_user_name();?>.p12" target="_blank">下载</a></p>
-                            <p> 密码：<?php echo $oo->get_ac_pass();?> </p>
-                            <p> 过期日期：<code><?php echo date('Y-m-d H:i:s',$oo->get_ac_expire());  ?></code> </p>
-                        </div><!-- /.box-body -->
-                    </div><!-- /.box -->
-                </div><!-- /.col (right) -->
-
-                <div class="col-md-6">
-                    <div class="box box-solid">
-                        <div class="box-header">
-                            <h3 class="box-title">签到获取流量</h3>
+                            <h3 class="box-title">签到</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 22小时内可以签到一次。</p>
