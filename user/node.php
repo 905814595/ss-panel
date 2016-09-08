@@ -109,8 +109,8 @@ $share = new Ss\User\Ss(2);
                                             <p> <a class="btn btn-xs bg-purple btn-flat margin" href="#">地址:</a> <code><?php echo $row['node_server']; ?></code>
                                                 <a class="btn btn-xs bg-green btn-flat margin" href="#">加密:</a><code><?php echo $row['node_method']; ?></code><br />
                                                 <a class="btn btn-xs bg-red btn-flat margin" href="#">显示:</a>
-                                                <a target="_blank" href="node_json.php?id=<?php echo $row['id']; ?>&type=1">json配置</a>/
-                                                <a target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>&type=1">二维码</a><br />
+                                                <a target="_blank" href="node_json.php?id=<?php echo $row['id']; ?>&type=2">json配置</a>/
+                                                <a target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>&type=2">二维码</a><br />
                                                 <a class="btn btn-xs bg-blue btn-flat margin" href="#">说明:</a><?php echo $row['node_info']; ?></p>
                                         </div><!-- /.tab-pane -->
                                     </div><!-- /.tab-content -->
