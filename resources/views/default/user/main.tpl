@@ -133,7 +133,7 @@
                 </li>
 
                 <li>
-                    <a href="/user/client">
+                    <a href="/user/clients">
                         <i class="fa fa-cloud-download"></i> <span>下载客户端</span>
                     </a>
                 </li>

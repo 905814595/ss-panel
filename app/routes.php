@@ -43,7 +43,7 @@ $app->group('/user', function () {
     $this->get('', 'App\Controllers\UserController:index');
     $this->get('/', 'App\Controllers\UserController:index');
     $this->post('/checkin', 'App\Controllers\UserController:doCheckin');
-    $this->post('/clients', 'App\Controllers\UserController:clients');
+    $this->get('/clients', 'App\Controllers\UserController:clients');
     $this->get('/node', 'App\Controllers\UserController:node');
     $this->get('/node/{id}', 'App\Controllers\UserController:nodeInfo');
     $this->get('/share', 'App\Controllers\UserController:share');
