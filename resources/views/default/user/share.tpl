@@ -64,7 +64,7 @@
                                 <div class="col-md-6">
                                     <ul class="nav nav-stacked">
                                         <li><a href="./share/{$node->id}">节点密码 <span
-                                                        class="pull-right badge bg-blue">{$node->passwd}</span></a>
+                                                        class="pull-right badge bg-blue">{$user->passwd}</span></a>
                                         </li>
                                         <li><a href="./share/{$node->id}">在线人数 <span
                                                         class="pull-right badge bg-aqua">{$node->getOnlineUserCount()}</span></a>
