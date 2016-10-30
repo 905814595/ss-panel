@@ -51,9 +51,9 @@
                         <p>前一小时在线用户</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-person-add"></i>
+                        <i class="ion ion-person-stalker"></i>
                     </div>
-                    <a href="/admin/user" class="small-box-footer"> More info <i class="fa fa-arrow-circle-right"></i>
+                    <a href="/admin/invite" class="small-box-footer"> More info <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
 
@@ -82,7 +82,7 @@
                         <p>产生流量</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
+                        <i class="ion ion-speedometer"></i>
                     </div>
                     <a href="/admin/trafficlog" class="small-box-footer"> More info <i
                                 class="fa fa-arrow-circle-right"></i> </a>
