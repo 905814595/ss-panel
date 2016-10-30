@@ -1,12 +1,17 @@
 {include file='user/main.tpl'}
 {$index=1}
-<div class="container">
-    <div class="section"> 
-        <!--   Icon Section   -->
+<div class="content-wrapper">
+     <section class="content-header">
+        <h1>
+            客户端下载
+            <small>Client Download</small>
+        </h1>
+    </section>
+    <section class="content">
         <div class="row">
-            <div class="row marketing">
-                <h2 class="sub-header" align="center">客户端下载</h2>
-                <div class="table-responsive">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-body table-responsive no-padding">
                     <table class="table table-striped">
                         <thead>
                         <tr>
@@ -107,9 +112,10 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
             </div>
         </div>
-    </div>
-</div>
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
 {include file='user/footer.tpl'}
