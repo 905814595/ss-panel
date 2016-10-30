@@ -37,7 +37,7 @@
                         <p>签到用户</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-person-add"></i>
+                        <i class="ion ion-person-stalker"></i>
                     </div>
                     <a href="/admin/checkinlog" class="small-box-footer"> 签到日志 <i class="fa fa-arrow-circle-right"></i>
                     </a>
@@ -51,7 +51,7 @@
                         <p>前一小时在线用户</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-person-stalker"></i>
+                        <i class="ion ion-person-add"></i>
                     </div>
                     <a href="/admin/invite" class="small-box-footer"> 邀请管理 <i class="fa fa-arrow-circle-right"></i>
                     </a>
