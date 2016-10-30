@@ -61,22 +61,6 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">注册时间</label>
-
-                                        <div class="col-sm-9">
-                                            <input class="form-control" id="reg_date" type="number" value="{$user->reg_date}" readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">注册IP</label>
-
-                                        <div class="col-sm-9">
-                                            <input class="form-control" id="reg_ip" type="number" value="{$user->reg_ip}" readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
                                         <label class="col-sm-3 control-label">是否管理员</label>
 
                                         <div class="col-sm-9">
@@ -106,6 +90,21 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">注册时间</label>
+
+                                        <div class="col-sm-9">
+                                            <input class="form-control" id="reg_date" value="{$user->reg_date}" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">注册IP</label>
+
+                                        <div class="col-sm-9">
+                                            <input class="form-control" id="reg_ip" value="{$user->reg_ip}" readonly>
+                                        </div>
+                                    </div>
                                 </fieldset>
                                 <fieldset class="col-sm-6">
                                     <legend>ShadowSocks连接信息</legend>

@@ -102,4 +102,17 @@ class XCat
         }
         return "reset traffic successful";
     }
+
+    public function resetSharePasswd()
+    {
+        try {
+            User::where("id", 2)->update([
+                'passwd' => Tools::genRandomChar(8),
+            ]);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            return false;
+        }
+        return "reset Share Passwd successful";
+    }
 }

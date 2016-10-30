@@ -44,6 +44,8 @@ $app->group('/user', function () {
     $this->post('/checkin', 'App\Controllers\UserController:doCheckin');
     $this->get('/node', 'App\Controllers\UserController:node');
     $this->get('/node/{id}', 'App\Controllers\UserController:nodeInfo');
+    $this->get('/share', 'App\Controllers\UserController:share');
+    $this->get('/share/{id}', 'App\Controllers\UserController:shareInfo');
     $this->get('/profile', 'App\Controllers\UserController:profile');
     $this->get('/invite', 'App\Controllers\UserController:invite');
     $this->post('/invite', 'App\Controllers\UserController:doInvite');

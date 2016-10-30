@@ -108,6 +108,12 @@
                 </li>
 
                 <li>
+                    <a href="/user/share">
+                        <i class="fa fa-sitemap"></i> <span>公用账号</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="/user/profile">
                         <i class="fa fa-user"></i> <span>我的信息</span>
                     </a>

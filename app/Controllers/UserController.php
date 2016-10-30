@@ -6,6 +6,7 @@ use App\Models\CheckInLog;
 use App\Models\InviteCode;
 use App\Models\Node;
 use App\Models\TrafficLog;
+use App\Models\User;
 use App\Services\Auth;
 use App\Services\Config;
 use App\Services\DbConfig;
@@ -75,6 +76,42 @@ class UserController extends BaseController
         $surge_proxy .= "[Proxy]\n";
         $surge_proxy .= "Proxy = custom," . $ary['server'] . "," . $ary['server_port'] . "," . $ary['method'] . "," . $ary['password'] . "," . Config::get('baseUrl') . "/downloads/SSEncrypt.module";
         return $this->view()->assign('json', $json)->assign('json_show', $json_show)->assign('ssqr', $ssqr)->assign('surge_base', $surge_base)->assign('surge_proxy', $surge_proxy)->display('user/nodeinfo.tpl');
+    }
+
+    public function share($request, $response, $args)
+    {
+        $msg = DbConfig::get('user-node');
+        $user = User::find(2);
+        $nodes = Node::where('type', 1)->orderBy('sort')->get();
+        return $this->view()->assign('nodes', $nodes)->assign('user', $user)->assign('msg', $msg)->display('user/share.tpl');
+    }
+
+    public function shareInfo($request, $response, $args)
+    {
+        $id = $args['id'];
+        $node = Node::find($id);
+        $user = User::find(2);
+
+        if ($node == null) {
+
+        }
+        $ary['server'] = $node->server;
+        $ary['server_port'] = $user->port;
+        $ary['password'] = $user->passwd;
+        $ary['method'] = $node->method;
+        if ($node->custom_method) {
+            $ary['method'] = $user->method;
+        }
+        $json = json_encode($ary);
+        $json_show = json_encode($ary, JSON_PRETTY_PRINT);
+        $ssurl = $ary['method'] . ":" . $ary['password'] . "@" . $ary['server'] . ":" . $ary['server_port'];
+        $ssqr = "ss://" . base64_encode($ssurl);
+
+        $surge_base = Config::get('baseUrl') . "/downloads/ProxyBase.conf";
+        $surge_proxy = "#!PROXY-OVERRIDE:ProxyBase.conf\n";
+        $surge_proxy .= "[Proxy]\n";
+        $surge_proxy .= "Proxy = custom," . $ary['server'] . "," . $ary['server_port'] . "," . $ary['method'] . "," . $ary['password'] . "," . Config::get('baseUrl') . "/downloads/SSEncrypt.module";
+        return $this->view()->assign('json', $json)->assign('json_show', $json_show)->assign('ssqr', $ssqr)->assign('surge_base', $surge_base)->assign('surge_proxy', $surge_proxy)->display('user/shareinfo.tpl');
     }
 
     public function profile($request, $response, $args)
