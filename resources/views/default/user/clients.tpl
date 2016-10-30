@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='user/main.tpl'}
 {$index=1}
 <div class="container">
     <div class="section"> 
@@ -112,4 +112,4 @@
         </div>
     </div>
 </div>
-{include file='footer.tpl'}
+{include file='user/footer.tpl'}
