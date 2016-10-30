@@ -94,6 +94,7 @@ class XCat
             User::where("enable", 1)->update([
                 'd' => 0,
                 'u' => 0,
+                'transfer_enable' => Tools::toGB(Config::get('defaultTraffic')),
             ]);
         } catch (\Exception $e) {
             echo $e->getMessage();
