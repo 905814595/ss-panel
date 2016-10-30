@@ -21,7 +21,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>节点</th>
-                                <th>加密</th>
+                                <th>流量比例</th>
+                                <th>加密方式</th>
                                 <th>描述</th>
                                 <th>排序</th>
                                 <th>操作</th>
@@ -30,6 +31,7 @@
                             <tr>
                                 <td>#{$node->id}</td>
                                 <td> {$node->name}</td>
+                                <td>{$node->traffic_rate}</td>
                                 <td>{$node->method}</td>
                                 <td>{$node->info}</td>
                                 <td>{$node->sort}</td>
