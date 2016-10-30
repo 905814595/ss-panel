@@ -109,7 +109,7 @@
 
                 <li>
                     <a href="/user/share">
-                        <i class="fa fa-share-alt/"></i> <span>公用账号</span>
+                        <i class="fa fa-share-alt"></i> <span>公用账号</span>
                     </a>
                 </li>
 
