@@ -114,6 +114,11 @@ class UserController extends BaseController
         return $this->view()->assign('json', $json)->assign('json_show', $json_show)->assign('ssqr', $ssqr)->assign('surge_base', $surge_base)->assign('surge_proxy', $surge_proxy)->display('user/shareinfo.tpl');
     }
 
+    public function clients($request, $response, $args)
+    {
+        return $this->view()->display('user/clients.tpl');
+    }
+
     public function profile($request, $response, $args)
     {
         return $this->view()->display('user/profile.tpl');

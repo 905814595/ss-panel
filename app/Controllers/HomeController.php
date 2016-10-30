@@ -55,6 +55,11 @@ class HomeController extends BaseController
         return $this->view()->display('tos.tpl');
     }
 
+    public function clients()
+    {
+        return $this->view()->display('clients.tpl');
+    }
+
     public function postDebug(Request $request,Response $response, $args)
     {
         $res = [

@@ -132,6 +132,12 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="/user/client">
+                        <i class="fa fa-cloud-download"></i> <span>下载客户端</span>
+                    </a>
+                </li>
+
                 {if $user->isAdmin()}
                     <li>
                         <a href="/user/invite">
