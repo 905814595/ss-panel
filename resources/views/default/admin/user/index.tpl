@@ -23,8 +23,8 @@
                                 <th>用户名</th>
                                 <th>邮箱</th>
                                 <th>端口</th>
-                                <th>加密方式</th>
-                                <th>已用流量/总流量</th>
+                                <th>已用流量</th>
+                                <th>总流量</th>
                                 <th>最后在线时间</th>
                                 <th>最后签到时间</th>
                                 <th>操作</th>
@@ -35,8 +35,8 @@
                                 <td>{$user->user_name}</td>
                                 <td>{$user->email}</td>
                                 <td>{$user->port}</td>
-                                <td>{$user->method}</td>
-                                <td>{$user->usedTraffic()}/{$user->enableTraffic()}</td>
+                                <td>{$user->usedTraffic()}</td>
+                                <td>{$user->enableTraffic()}</td>
                                 <td>{$user->lastSsTime()}</td>
                                 <td>{$user->lastCheckInTime()}</td>
                                 <td>
