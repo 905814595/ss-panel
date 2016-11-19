@@ -57,8 +57,20 @@
                             <tr>
                                 <td>{$index++}</td>
                                 <td>iOS</td>
+                                <td>Surge</td>
+                                <td><a href="https://itunes.apple.com/cn/app/id1040100637" target="_blank">AppStore</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
+                                <td>iOS</td>
                                 <td>ShadowRocket</td>
-                                <td><a href="https://itunes.apple.com/cn/app/shadowrocket-for-shadowsocks/id932747118" target="_blank">AppStore</a></td>
+                                <td><a href="https://itunes.apple.com/cn/app/id932747118" target="_blank">AppStore</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
+                                <td>iOS</td>
+                                <td>Wingy</td>
+                                <td><a href="https://itunes.apple.com/cn/app/id1148026741" target="_blank">AppStore</a></td>
                             </tr>
 <!--                             <tr>
                                 <td>{$index++}</td>
