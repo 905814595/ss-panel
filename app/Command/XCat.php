@@ -33,6 +33,8 @@ class XCat
                 return $this->resetTraffic();
             case("sendDiaryMail"):
                 return DailyMail::sendDailyMail();
+            case("resetSharePasswd"):
+                return $this->resetSharePasswd();
             default:
                 return $this->defaultAction();
         }
