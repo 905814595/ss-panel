@@ -98,6 +98,16 @@ class Tools
     }
 
     /**
+     * Unix time to Date Time
+     * @param $time
+     * @return mixed
+     */
+    public static function toShortDateTime($time)
+    {
+        return date('yy/mm/dd H:i', $time);
+    }
+
+    /**
      * @param $seconds
      * @return mixed
      */

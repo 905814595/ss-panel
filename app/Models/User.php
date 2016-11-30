@@ -52,7 +52,7 @@ class User extends Model
         if ($this->attributes['t'] == 0) {
             return "从未使用喵";
         }
-        return Tools::toDateTime($this->attributes['t']);
+        return Tools::toShortDateTime($this->attributes['t']);
     }
 
     public function lastCheckInTime()
@@ -60,7 +60,7 @@ class User extends Model
         if ($this->attributes['last_check_in_time'] == 0) {
             return "从未签到";
         }
-        return Tools::toDateTime($this->attributes['last_check_in_time']);
+        return Tools::toShortDateTime($this->attributes['last_check_in_time']);
     }
 
     public function regDate()
