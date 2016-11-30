@@ -11,9 +11,23 @@
                             <tr>
                                 <td>{$index++}</td>
                                 <td>Android</td>
+                                <td>shadowsocks 最新版</td>
+                                <td><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank">Google Play</a> /
+                                    <a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank">github最新版</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
+                                <td>Android</td>
+                                <td>shadowsocks 3.3.0</td>
+                                <td><a href="/downloads/shadowsocks-nightly-3.3.0.apk" target="_blank">本地下载</a> /
+                                    <a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v3.3.0/shadowsocks-nightly-3.3.0.apk" target="_blank">github</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
+                                <td>Android</td>
                                 <td>shadowsocks 2.8.3</td>
                                 <td><a href="/downloads/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载</a> /
-                                    <a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank">Google Play</a></td>
+                                    <a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v2.8.3/shadowsocks-nightly-2.8.3.apk" target="_blank">github</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
@@ -37,8 +51,8 @@
                             <tr>
                                 <td>{$index++}</td>
                                 <td>Windows</td>
-                                <td>shadowsocks 3.0</td>
-                                <td><a href="/downloads/Shadowsocks-3.0.zip" target="_blank">本地下载</a> /
+                                <td>shadowsocks 3.3.5</td>
+                                <td><a href="/downloads/Shadowsocks-3.3.5.zip" target="_blank">本地下载</a> /
                                     <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">Git最新版</a></td>
                             </tr>
                             <tr>
@@ -83,6 +97,12 @@
                                 <td>ShadowRocket配置文件</td>
                                 <td>http://www.abclite.cn/Abclite_SR.conf</td>
                                 <td><a href="http://www.abclite.cn/Abclite_SR.conf" target="_blank">远程下载</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
+                                <td>Surge配置文件</td>
+                                <td>http://www.abclite.cn/Abclite.conf</td>
+                                <td><a href="http://www.abclite.cn/Abclite.conf" target="_blank">远程下载</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
