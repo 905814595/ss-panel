@@ -104,7 +104,7 @@ class Tools
      */
     public static function toShortDateTime($time)
     {
-        return date('yy/mm/dd H:i', $time);
+        return date('y/m/d H:i', $time);
     }
 
     /**
