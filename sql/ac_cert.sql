@@ -18,3 +18,17 @@ CREATE TABLE `ac_cert` (
 --
 
 INSERT INTO `ac_cert` (`uid`, `user_name`) SELECT `uid`,`user_name` FROM `user`;
+
+--
+-- Table structure for table `ac_cert`
+--
+
+DROP TABLE IF EXISTS `wechat`;
+CREATE TABLE `wechat` (
+  `uid` int(11) NOT NULL,
+  `openid` varchar(64) NOT NULL,
+  `unid` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `wechat` (`uid`) SELECT `uid` FROM `user`;
+
