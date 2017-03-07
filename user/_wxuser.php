@@ -5,13 +5,14 @@ if($_GET['uid'] != ''){
     $oo = new Ss\User\Ss($uid); 
     
     //计算流量并保留2位小数
+    $transfers = $oo->get_transfer()/$togb;
     $all_transfer = $oo->get_transfer_enable()/$togb;
-    $unused_transfer =  $oo->unused_transfer()/$togb;
-    $used_100 = $oo->get_transfer()/$oo->get_transfer_enable();
+    $unused_transfer = $all_transfer - $transfers;
+    $used_100 = $transfers/$all_transfer;
     $used_100 = round($used_100,2);
     $used_100 = $used_100*100;
+    
     //计算流量并保留2位小数
-    $transfers = $transfers/$tomb;
     $transfers = round($transfers,2);
     $all_transfer = round($all_transfer,2);
     $unused_transfer = round($unused_transfer,2);
