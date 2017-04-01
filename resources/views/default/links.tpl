@@ -18,9 +18,9 @@
                             <tr>
                                 <td>{$index++}</td>
                                 <td>Android</td>
-                                <td>shadowsocks 3.3.0</td>
-                                <td><a href="/downloads/shadowsocks-nightly-3.3.0.apk" target="_blank">本地下载</a> /
-                                    <a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v3.3.0/shadowsocks-nightly-3.3.0.apk" target="_blank">github</a></td>
+                                <td>shadowsocks 3.3.1</td>
+                                <td><a href="/downloads/shadowsocks-nightly-3.3.1.apk" target="_blank">本地下载</a> /
+                                    <a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v3.3.1/shadowsocks-nightly-3.3.1.apk" target="_blank">github</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
@@ -84,7 +84,7 @@
                                 <td>{$index++}</td>
                                 <td>iOS</td>
                                 <td>Wingy</td>
-                                <td><a href="https://itunes.apple.com/cn/app/id1148026741" target="_blank">AppStore</a></td>
+                                <td><a href="https://itunes.apple.com/cn/app/id1178584911" target="_blank">AppStore</a></td>
                             </tr>
 <!--                             <tr>
                                 <td>{$index++}</td>
