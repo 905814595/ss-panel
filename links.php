@@ -15,13 +15,25 @@ $index = 1;
             <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Android</td>
-                <td>shadowsocks 2.8.3</td>
-                <td><a href="/download/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载</a></td>
+                <td>shadowsocks 3.3.1</td>
+                <td><a href="/download/shadowsocks-nightly-3.3.1.apk" target="_blank">本地下载</a></td>
             </tr>
-             <tr>
+            <tr>
+                <td><?php echo $index++ ?></td>
+                <td>Android</td>
+                <td>shadowsocks 3.3.1</td>
+                <td><a href="https://github.com/shadowsocks/shadowsocks-android/releases/download/v3.3.1/shadowsocks-nightly-3.3.1.apk" target="_blank">GitHub</a></td>
+            </tr>
+            <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Android</td>
                 <td>shadowsocks 2.8.3</td>
+                <td><a href="/download/shadowsocks-nightly-2.8.3.apk" target="_blank">本地下载</a></td>
+            </tr>
+            <tr>
+                <td><?php echo $index++ ?></td>
+                <td>Android</td>
+                <td>shadowsocks最新版</td>
                 <td><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank">Google Play</a></td>
             </tr>
             <tr>
@@ -30,13 +42,13 @@ $index = 1;
                 <td><del>fqrouter</del>(已阵亡)</td>
                 <td><a href="/download/fqrouter.apk" target="_blank">本地下载</a></td>
             </tr>
-             <tr>
+            <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Android</td>
                 <td>OpenConnect</td>
                 <td><a href="/download/OpenConnect.apk" target="_blank">本地下载</a></td>
             </tr>
-             <tr>
+            <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Android</td>
                 <td>OpenConnect</td>
@@ -70,21 +82,33 @@ $index = 1;
                 <td><?php echo $index++ ?></td>
                 <td>iOS</td>
                 <td>ShadowRocket</td>
-                <td><a href="https://itunes.apple.com/cn/app/shadowrocket-for-shadowsocks/id932747118" target="_blank">AppStore</a></td>
+                <td><a href="https://itunes.apple.com/cn/app/id932747118" target="_blank">AppStore</a></td>
             </tr>
             <tr>
                 <td><?php echo $index++ ?></td>
                 <td>iOS</td>
+                <td>Wingy</td>
+                <td><a href="https://itunes.apple.com/cn/app/id1178584911" target="_blank">AppStore</a></td>
+            </tr>
+            <tr>
+                <td><?php echo $index++ ?></td>
+                <td>iOS</td>
+                <td>Surge</td>
+                <td><a href="https://itunes.apple.com/cn/app/id1040100637" target="_blank">AppStore</a></td>
+            </tr>
+<!--             <tr>
+                <td><?php echo $index++ ?></td>
+                <td>iOS</td>
                 <td>AnyConnect</td>
                 <td><a href="https://itunes.apple.com/us/app/cisco-anyconnect/id392790924" target="_blank">AppStore</a></td>
-            </tr>
+            </tr> -->
             <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Mac OS</td>
                 <td>shadowsocks 2.6.3</td>
                 <td><a href="/download/shadowsocksX-2.6.3.dmg" target="_blank">本地下载</a></td>
             </tr>
-             <tr>
+            <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Mac OS</td>
                 <td>shadowsocks 2.6.3</td>
@@ -96,13 +120,13 @@ $index = 1;
                 <td>shadowsocks Qt5</td>
                 <td><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation" target="_blank">链接</a></td>
             </tr>
-             <tr>
+            <tr>
                 <td><?php echo $index++ ?></td>
                 <td>Linux</td>
                 <td>shadowsocks Command Line</td>
                 <td>pip install shadowsocks</td>
             </tr>
-          <tr>
+            <tr>
                 <td><?php echo $index++ ?></td>
                 <td>OpenWRT</td>
                 <td>shadowsocks-libev</td>
