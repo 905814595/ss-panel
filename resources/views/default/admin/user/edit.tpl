@@ -39,7 +39,7 @@
                                 <fieldset class="col-sm-6">
                                     <legend>帐号信息</legend>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">用户名</label>
+                                        <label class="col-sm-3 control-label">昵称</label>
 
                                         <div class="col-sm-9">
                                             <input class="form-control" id="user_name" value="{$user->user_name}">

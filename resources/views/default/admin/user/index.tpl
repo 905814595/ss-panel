@@ -13,6 +13,22 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
+            <div class="col-md-12">
+                <div id="msg-success" class="alert alert-success alert-dismissable" style="display: none;">
+                    <button type="button" class="close" id="ok-close" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-info"></i> 成功!</h4>
+
+                    <p id="msg-success-p"></p>
+                </div>
+                <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
+                    <button type="button" class="close" id="error-close" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+
+                    <p id="msg-error-p"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-body table-responsive no-padding">
@@ -20,30 +36,34 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
-                                <th>用户名</th>
                                 <th>邮箱</th>
                                 <th>端口</th>
-                                <th>已用流量</th>
-                                <th>剩余流量</th>
-                                <th>总流量</th>
+                                <th>状态</th>
+                                <th>加密方式</th>
+                                <th>已用流量/总流量</th>
                                 <th>最后在线时间</th>
                                 <th>最后签到时间</th>
+                                <th>注册时间</th>
+                                <th>注册IP</th>
+                                <th>邀请者</th>
                                 <th>操作</th>
                             </tr>
                             {foreach $users as $user}
                             <tr>
                                 <td>#{$user->id}</td>
-                                <td>{$user->user_name}</td>
-                                <td>{$user->email}</td>
+                                <td><abbr title="{$user->user_name}">{$user->email}</abbr></td>
                                 <td>{$user->port}</td>
-                                <td>{$user->usedTraffic()}</td>
-                                <td>{$user->unusedTraffic()}</td>
-                                <td>{$user->enableTraffic()}</td>
+                                <td>{$user->enable}</td>
+                                <td>{$user->method}</td>
+                                <td>{$user->usedTraffic()}/{$user->enableTraffic()}</td>
                                 <td>{$user->lastSsTime()}</td>
                                 <td>{$user->lastCheckInTime()}</td>
+                                <th>{$user->reg_date}</th>
+                                <th>{$user->reg_ip}</th>
+                                <th>{$user->ref_by}</th>
                                 <td>
                                     <a class="btn btn-info btn-sm" href="/admin/user/{$user->id}/edit">编辑</a>
-                                    <a class="btn btn-danger btn-sm" id="delete" value="{$user->id}" href="/admin/user/{$user->id}/delete">删除</a>
+                                    <a class="btn btn-danger btn-sm" onclick="deleteUser({$user->id})">删除</a>
                                 </td>
                             </tr>
                             {/foreach}
@@ -59,14 +79,17 @@
 
 
 <script>
-    $(document).ready(function(){
-        function delete(){
+    //$(document).ready(function () {
+        function deleteUser(userId){
+            if (!confirm("确定要删除用户 #"+userId+" 吗？")){
+                return;
+            }
             $.ajax({
                 type:"DELETE",
-                url:"/admin/user/",
+                url:"/admin/user/"+userId,
                 dataType:"json",
                 data:{
-                    name: $("#name").val()
+                    id: userId
                 },
                 success:function(data){
                     if(data.ret){
@@ -92,16 +115,13 @@
                 login();
             }
         });
-        $("#delete").click(function(){
-            delete();
-        });
         $("#ok-close").click(function(){
             $("#msg-success").hide(100);
         });
         $("#error-close").click(function(){
             $("#msg-error").hide(100);
         });
-    })
+    //})
 </script>
 
 {include file='admin/footer.tpl'}
