@@ -36,31 +36,29 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
+                                <th>用户名</th>
                                 <th>邮箱</th>
                                 <th>端口</th>
-                                <th>状态</th>
                                 <th>加密方式</th>
-                                <th>已用流量/总流量</th>
+                                <th>已用流量</th>
+                                <th>剩余流量</th>
+                                <th>总流量</th>
                                 <th>最后在线时间</th>
                                 <th>最后签到时间</th>
-                                <th>注册时间</th>
-                                <th>注册IP</th>
-                                <th>邀请者</th>
                                 <th>操作</th>
                             </tr>
                             {foreach $users as $user}
                             <tr>
                                 <td>#{$user->id}</td>
+                                <td>{$user->user_name}</td>
                                 <td><abbr title="{$user->user_name}">{$user->email}</abbr></td>
                                 <td>{$user->port}</td>
-                                <td>{$user->enable}</td>
                                 <td>{$user->method}</td>
-                                <td>{$user->usedTraffic()}/{$user->enableTraffic()}</td>
+                                <td>{$user->usedTraffic()}</td>
+                                <td>{$user->unusedTraffic()}</td>
+                                <td>{$user->enableTraffic()}</td>
                                 <td>{$user->lastSsTime()}</td>
                                 <td>{$user->lastCheckInTime()}</td>
-                                <th>{$user->reg_date}</th>
-                                <th>{$user->reg_ip}</th>
-                                <th>{$user->ref_by}</th>
                                 <td>
                                     <a class="btn btn-info btn-sm" href="/admin/user/{$user->id}/edit">编辑</a>
                                     <a class="btn btn-danger btn-sm" onclick="deleteUser({$user->id})">删除</a>
