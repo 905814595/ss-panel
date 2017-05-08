@@ -7,6 +7,8 @@ use App\Models\InviteCode;
 use App\Models\TrafficLog;
 use App\Models\NodeInfoLog;
 use App\Models\NodeOnlineLog;
+use App\Models\User;
+use App\Models\Node;
 use App\Services\Analytics;
 use App\Services\DbConfig;
 use App\Utils\Tools;
@@ -67,9 +69,29 @@ class AdminController extends UserController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $logs = TrafficLog::orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
+        $user = 0;
+        if (isset($request->getQueryParams()["searchUser"])) {
+            $user = $request->getQueryParams()["searchUser"];
+        }
+        $node = 0;
+        if (isset($request->getQueryParams()["searchNode"])) {
+            $node = $request->getQueryParams()["searchNode"];
+        }
+        if ($user > 0) {
+            $logs = TrafficLog::where('user_id', $user)->orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
+        } elseif ($node > 0){
+            $logs = TrafficLog::where('node_id', $node)->orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
+        } else{
+            $logs = TrafficLog::orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
+        }
+
         $logs->setPath('/admin/trafficlog');
-        return $this->view()->assign('logs', $logs)->display('admin/trafficlog.tpl');
+        $users = User::all();
+        $nodes = Node::all();
+        return $this->view()->assign('logs', $logs)
+            ->assign('users', $users)
+            ->assign('nodes', $nodes)
+            ->display('admin/trafficlog.tpl');
     }
 
     public function config($request, $response, $args)
