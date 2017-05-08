@@ -63,35 +63,57 @@ class AdminController extends UserController
         return $this->view()->assign('logs', $traffic)->display('admin/checkinlog.tpl');
     }
 
+
+    private function getTrafficLog($node, $user, $pageNum){
+        $logs = TrafficLog::orderBy('id', 'desc');
+        if ($user > 0) {
+            $logs->where('user_id', $user);
+        }
+        if ($node > 0) {
+            $logs->where('node_id', $node);
+        }
+        $logs->paginate(15, ['*'], 'page', $pageNum);
+        if ($node == -1) {
+            $logs->setPath('/admin/trafficlog');
+        } elseif ($user == -1){
+            $logs->setPath('/admin/trafficlog/'+$node);
+        } else {
+            $logs->setPath('/admin/trafficlog/'+$node+'/'+$user);
+        }
+
+        return $this->view()->assign('logs', $logs)
+            ->assign('seleUser', $user)
+            ->assign('seleNode', $node)
+            ->assign('users', User::all())
+            ->assign('nodes', Node::all())
+            ->display('admin/trafficlog.tpl');
+    }
+
     public function trafficLog($request, $response, $args)
     {
         $pageNum = 1;
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $user = 0;
-        if (isset($request->getQueryParams()["searchUser"])) {
-            $user = $request->getQueryParams()["searchUser"];
-        }
-        $node = 0;
-        if (isset($request->getQueryParams()["searchNode"])) {
-            $node = $request->getQueryParams()["searchNode"];
-        }
-        if ($user > 0) {
-            $logs = TrafficLog::where('user_id', $user)->orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
-        } elseif ($node > 0){
-            $logs = TrafficLog::where('node_id', $node)->orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
-        } else{
-            $logs = TrafficLog::orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
-        }
+        $this->getTrafficLog(-1, -1, $pageNum);
+    }
 
-        $logs->setPath('/admin/trafficlog');
-        $users = User::all();
-        $nodes = Node::all();
-        return $this->view()->assign('logs', $logs)
-            ->assign('users', $users)
-            ->assign('nodes', $nodes)
-            ->display('admin/trafficlog.tpl');
+    public function trafficLogNode($request, $response, $args)
+    {
+        $pageNum = 1;
+        if (isset($request->getQueryParams()["page"])) {
+            $pageNum = $request->getQueryParams()["page"];
+        }
+        $this->getTrafficLog($args['nid'], -1, $pageNum);
+    }
+
+    public function trafficLogFull($request, $response, $args)
+    {
+        $pageNum = 1;
+        if (isset($request->getQueryParams()["page"])) {
+            $pageNum = $request->getQueryParams()["page"];
+        }
+        $this->getTrafficLog($args['nid'], $args['uid'], $pageNum);
     }
 
     public function config($request, $response, $args)

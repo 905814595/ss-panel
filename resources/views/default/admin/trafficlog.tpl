@@ -25,19 +25,19 @@
                 <div class="box form-inline">
                     <div class="form-group">
                         <label for="labelUser">用户</label>
-                        <select id="search-user">
+                        <select id="search-user" onchange="changeUser(this.options[this.options.selectedIndex].value)">
                             <option value="0">所有人</option>
                         {foreach $users as $user}
-                            <option value="{$user->id}">{$user->user_name}</option>  
+                            <option value="{$user->id}" {if $user->id==$seleUser}selected="selected"{/if}>{$user->user_name}</option>  
                         {/foreach}
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="labelNode">节点</label>
-                        <select id="search-node">
+                        <select id="search-node" onchange="changeNode(this.options[this.options.selectedIndex].value)">
                             <option value="0">所有节点</option>
                         {foreach $nodes as $node}
-                            <option value="{$node->id}">{$node->name}</option>  
+                            <option value="{$node->id}" {if $node->id==$seleNode}selected="selected"{/if}>{$node->name}</option>  
                         {/foreach}
                         </select>
                     </div>
@@ -77,23 +77,15 @@
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
 <script>
+    function changeUser(user){
+        $seleUser = user
+    }
+    function changeNode(node){
+        $seleNode = node
+    }
     $(document).ready(function () {
         $("#log-search").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "/admin/trafficlog",
-                dataType: "json",
-                data: {
-                    searchUser: $("#search-user").val(),
-                    searchNode: $("#search-node").val(),
-                },
-                success: function (data) {
-                    window.setTimeout("location.href='/admin/trafficlog'", 2000);
-                },
-                error: function (jqXHR) {
-                    alert("发生错误：" + jqXHR.status);
-                }
-            })
+            window.setTimeout("location.href='/admin/trafficlog/"+$seleNode+"/"+$seleUser+"'", 2000);
         })
     })
 </script>
