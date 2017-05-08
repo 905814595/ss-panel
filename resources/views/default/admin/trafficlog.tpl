@@ -25,19 +25,23 @@
                 <div class="box form-inline">
                     <div class="form-group">
                         <label for="labelUser">用户</label>
-                        <select id="search-user" onchange="changeUser(this.options[this.options.selectedIndex].value)">
+                        <select id="search-user">
                             <option value="0">所有人</option>
                         {foreach $users as $user}
-                            <option value="{$user->id}" {if $user->id==$seleUser}selected="selected"{/if}>{$user->user_name}</option>  
+                            <option value="{$user->id}" {if $user->id==$seleUser}selected="selected"{/if}>
+                                {$user->user_name}
+                            </option>  
                         {/foreach}
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="labelNode">节点</label>
-                        <select id="search-node" onchange="changeNode(this.options[this.options.selectedIndex].value)">
+                        <select id="search-node">
                             <option value="0">所有节点</option>
                         {foreach $nodes as $node}
-                            <option value="{$node->id}" {if $node->id==$seleNode}selected="selected"{/if}>{$node->name}</option>  
+                            <option value="{$node->id}" {if $node->id==$seleNode}selected="selected"{/if}>
+                                {$node->name}
+                            </option>  
                         {/foreach}
                         </select>
                     </div>
@@ -77,15 +81,9 @@
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
 <script>
-    function changeUser(user){
-        $seleUser = user
-    }
-    function changeNode(node){
-        $seleNode = node
-    }
     $(document).ready(function () {
         $("#log-search").click(function () {
-            window.setTimeout("location.href='/admin/trafficlog/"+$seleNode+"/"+$seleUser+"'", 2000);
+            window.setTimeout("location.href='/admin/trafficlog/"+$("#search-node").val()+"/"+$("#search-user").val()+"'", 500);
         })
     })
 </script>

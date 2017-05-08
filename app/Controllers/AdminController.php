@@ -72,7 +72,7 @@ class AdminController extends UserController
         if ($node > 0) {
             $logs->where('node_id', $node);
         }
-        $logs->paginate(15, ['*'], 'page', $pageNum);
+        $logs = $logs->paginate(15, ['*'], 'page', $pageNum);
         if ($node == -1) {
             $logs->setPath('/admin/trafficlog');
         } elseif ($user == -1){
