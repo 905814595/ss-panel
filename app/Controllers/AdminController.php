@@ -71,21 +71,17 @@ class AdminController extends UserController
         }
         $logs = TrafficLog::orderBy('id', 'desc');
         $user = $args['uid'];
-        if ($user && $user > 0) {
+        if (isset($user) && $user > 0) {
             $logs->where('user_id', $user);
-        } else {
-            $user = -1;
         }
         $node = $args['nid'];
-        if ($node && $node > 0) {
+        if (isset($node) && $node > 0) {
             $logs->where('node_id', $node);
-        } else {
-            $node = -1;
         }
         $logs = $logs->paginate(15, ['*'], 'page', $pageNum);
-        if ($node == -1) {
+        if (!isset($node)) {
             $logs->setPath('/admin/trafficlog');
-        } elseif ($user == -1){
+        } elseif (!isset($user)){
             $logs->setPath("/admin/trafficlog/$node");
         } else {
             $logs->setPath("/admin/trafficlog/$node/$user");
