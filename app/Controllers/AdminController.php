@@ -76,9 +76,9 @@ class AdminController extends UserController
         if ($node == -1) {
             $logs->setPath('/admin/trafficlog');
         } elseif ($user == -1){
-            $logs->setPath('/admin/trafficlog/'+$node);
+            $logs->setPath("/admin/trafficlog/$node");
         } else {
-            $logs->setPath('/admin/trafficlog/'+$node+'/'+$user);
+            $logs->setPath("/admin/trafficlog/$node/$user");
         }
 
         return $this->view()->assign('logs', $logs)
