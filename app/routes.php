@@ -32,7 +32,6 @@ $app->add(new WhoopsMiddleware);
 
 // Home
 $app->get('/', 'App\Controllers\HomeController:index');
-$app->get('/code', 'App\Controllers\HomeController:code');
 $app->get('/tos', 'App\Controllers\HomeController:tos');
 $app->get('/clients', 'App\Controllers\HomeController:clients');
 $app->get('/debug', 'App\Controllers\HomeController:debug');
@@ -44,6 +43,7 @@ $app->group('/user', function () {
     $this->get('/', 'App\Controllers\UserController:index');
     $this->post('/checkin', 'App\Controllers\UserController:doCheckin');
     $this->get('/clients', 'App\Controllers\UserController:clients');
+    $this->get('/code', 'App\Controllers\HomeController:code');
     $this->get('/node', 'App\Controllers\UserController:node');
     $this->get('/node/{id}', 'App\Controllers\UserController:nodeInfo');
     $this->get('/share', 'App\Controllers\UserController:share');
