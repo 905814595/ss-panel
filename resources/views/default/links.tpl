@@ -44,6 +44,20 @@
                             </tr> -->
                             <tr>
                                 <td>{$index++}</td>
+                                <td>Mac OS</td>
+                                <td>ShadowsocksX-NG</td>
+                                <td><a href="/downloads/ShadowsocksX-NG.1.5.1.zip" target="_blank">本地下载</a> /
+                                    <a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank">Git最新版</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
+                                <td>Mac OS</td>
+                                <td>shadowsocks 2.6.3</td>
+                                <td><a href="/downloads/shadowsocksX-2.6.3.dmg" target="_blank">本地下载</a> /
+                                    <a href="https://github.com/shadowsocks/shadowsocks-iOS/releases/download/2.6.3/ShadowsocksX-2.6.3.dmg" target="_blank">远程下载</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$index++}</td>
                                 <td>Windows</td>
                                 <td>shadowsocks 2.5.8</td>
                                 <td><a href="/downloads/Shadowsocks-2.5.8.zip" target="_blank">本地下载</a></td>
@@ -51,15 +65,15 @@
                             <tr>
                                 <td>{$index++}</td>
                                 <td>Windows</td>
-                                <td>shadowsocks 3.3.5</td>
-                                <td><a href="/downloads/Shadowsocks-3.3.5.zip" target="_blank">本地下载</a> /
+                                <td>shadowsocks 4.0.4</td>
+                                <td><a href="/downloads/Shadowsocks-4.0.4.zip" target="_blank">本地下载</a> /
                                     <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">Git最新版</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
                                 <td>Windows</td>
                                 <td>Shadowsocks-R</td>
-                                <td><a href="/downloads/ShadowsocksR-win-3.7.4.1.7z" target="_blank">本地下载</a> /
+                                <td><a href="/downloads/ShadowsocksR-4.6.1-win.7z" target="_blank">本地下载</a> /
                                     <a href="https://github.com/breakwa11/shadowsocks-csharp/releases" target="_blank">Git最新版</a></td>
                             </tr>
                            <tr>
@@ -103,13 +117,6 @@
                                 <td>Surge配置文件</td>
                                 <td>http://www.abclite.cn/Abclite.conf</td>
                                 <td><a href="http://www.abclite.cn/Abclite.conf" target="_blank">远程下载</a></td>
-                            </tr>
-                            <tr>
-                                <td>{$index++}</td>
-                                <td>Mac OS</td>
-                                <td>shadowsocks 2.6.3</td>
-                                <td><a href="/downloads/shadowsocksX-2.6.3.dmg" target="_blank">本地下载</a> /
-                                    <a href="https://github.com/shadowsocks/shadowsocks-iOS/releases/download/2.6.3/ShadowsocksX-2.6.3.dmg" target="_blank">远程下载</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
