@@ -12,7 +12,7 @@
                                 <td>{$index++}</td>
                                 <td>Android</td>
                                 <td>shadowsocks 最新版</td>
-                                <td><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank">Google Play</a> /
+                                <td><a href="/downloads/shadowsocks-nightly-4.1.8.apk" target="_blank">本地下载</a> /
                                     <a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank">github最新版</a></td>
                             </tr>
                             <tr>
@@ -35,19 +35,19 @@
                                 <td>fqrouter 2.1.2(需要root，请勿升级)</td>
                                 <td><a href="/downloads/fqrouter.apk" target="_blank">本地下载</a></td>
                             </tr>
-<!--                             <tr>
+                            <tr>
                                 <td>{$index++}</td>
                                 <td>Android</td>
-                                <td>OpenConnect</td>
-                                <td><a href="/downloads/OpenConnect.apk" target="_blank">本地下载</a> /
+                                <td>Shadowsocks-RSS</td>
+                                <td><a href="/downloads/ssr-3.4.0.5.apk" target="_blank">本地下载</a> /
                                     <a href="https://play.google.com/store/apps/details?id=app.openconnect" target="_blank">Google Play</a></td>
-                            </tr> -->
+                            </tr>
                             <tr>
                                 <td>{$index++}</td>
                                 <td>Mac OS</td>
                                 <td>ShadowsocksX-NG</td>
                                 <td><a href="/downloads/ShadowsocksX-NG.1.5.1.zip" target="_blank">本地下载</a> /
-                                    <a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank">Git最新版</a></td>
+                                    <a href="https://github.com/shadowsocksr/shadowsocksr-android/releases" target="_blank">Git最新版</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
@@ -76,7 +76,7 @@
                                 <td><a href="/downloads/ShadowsocksR-4.6.1-win.7z" target="_blank">本地下载</a> /
                                     <a href="https://github.com/breakwa11/shadowsocks-csharp/releases" target="_blank">Git最新版</a></td>
                             </tr>
-                           <tr>
+                            <tr>
                                 <td>{$index++}</td>
                                 <td>Google Chrome浏览器</td>
                                 <td>SwitchySharp插件</td>
@@ -100,12 +100,6 @@
                                 <td>Wingy</td>
                                 <td><a href="https://itunes.apple.com/cn/app/id1178584911" target="_blank">AppStore</a></td>
                             </tr>
-<!--                             <tr>
-                                <td>{$index++}</td>
-                                <td>iOS</td>
-                                <td>AnyConnect</td>
-                                <td><a href="https://itunes.apple.com/us/app/cisco-anyconnect/id392790924" target="_blank">AppStore</a></td>
-                            </tr> -->
                             <tr>
                                 <td>{$index++}</td>
                                 <td>ShadowRocket配置文件</td>
@@ -124,13 +118,13 @@
                                 <td>shadowsocks Qt5</td>
                                 <td><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation" target="_blank">链接</a></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>{$index++}</td>
                                 <td>Linux</td>
                                 <td>shadowsocks Command Line</td>
                                 <td>pip install shadowsocks</td>
                             </tr>
-                          <tr>
+                            <tr>
                                 <td>{$index++}</td>
                                 <td>OpenWRT</td>
                                 <td>shadowsocks-libev</td>
