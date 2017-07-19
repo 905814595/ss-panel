@@ -47,7 +47,7 @@
                                 <td>Mac OS</td>
                                 <td>ShadowsocksX-NG</td>
                                 <td><a href="/downloads/ShadowsocksX-NG.1.5.1.zip" target="_blank">本地下载</a> /
-                                    <a href="https://github.com/shadowsocksr/shadowsocksr-android/releases" target="_blank">Git最新版</a></td>
+                                    <a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank">Git最新版</a></td>
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
