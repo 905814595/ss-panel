@@ -39,8 +39,7 @@
                                 <td>{$index++}</td>
                                 <td>Android</td>
                                 <td>Shadowsocks-RSS</td>
-                                <td><a href="/downloads/ssr-3.4.0.5.apk" target="_blank">本地下载</a> /
-                                    <a href="https://play.google.com/store/apps/details?id=app.openconnect" target="_blank">Google Play</a></td>
+                                <td><a href="/downloads/ssr-3.4.0.5.apk" target="_blank">本地下载</a> 
                             </tr>
                             <tr>
                                 <td>{$index++}</td>
